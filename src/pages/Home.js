@@ -4,6 +4,7 @@ import './Home.css'
 
 import GradualPicture from '../components/GradualPicture'
 import Header from '../components/Header'
+import BlogList from '../components/BlogList'
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -23,6 +24,7 @@ export default class Home extends React.Component {
             ></GradualPicture>
             <div className="content-container">
                 <Header></Header>
+                <BlogList viewWidth={''}></BlogList>
             </div>
         </div>;
     }

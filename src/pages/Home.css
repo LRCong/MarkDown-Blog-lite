@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .app {
@@ -14,6 +15,7 @@
     margin: 20px auto;
     background-color: #fefefe;
     min-height: 500px;
-    width: 80%;
+    width: 90%;
     box-shadow: 5px 5px 5px grey;
+    padding: 20px;
 }

@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import './Header.css'
 
 export default function Header(props) {
     return (
         <div className='header'>
-
             <div className='nav'>
                 <hr />
                 <ul>
@@ -19,7 +17,6 @@ export default function Header(props) {
                 </ul>
                 <hr />
             </div>
-
         </div>
     );
 }
