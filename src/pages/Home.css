@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.app {
+    min-height: 100vh;
+    background-color: blanchedalmond;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.app .content-container {
+    margin: 20px auto;
+    background-color: #fefefe;
+    min-height: 500px;
+    width: 80%;
+    box-shadow: 5px 5px 5px grey;
+}
