@@ -10,7 +10,9 @@
 ## 2020/12/9
 完成项：
 + 基本的展示主页布局
+  ![image](https://github.com/LRCong/MarkDown-Blog-lite/blob/main/photo/HomeDemo.gif)
 + 后台登录页面及逻辑
+  ![image](https://github.com/LRCong/MarkDown-Blog-lite/blob/main/photo/LoginDemo.gif)
 
 未来待改进：
 + 主页排版、功能提升
