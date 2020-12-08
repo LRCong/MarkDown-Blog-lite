@@ -9,8 +9,15 @@ import BlogList from '../components/BlogList'
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { blogType: "All" };
     }
+
+    handleNavClick = (e, type) => {
+        e.preventDefault();
+        this.setState({
+            blogType: type
+        });
+    };
 
     render() {
         return <div className='app'>
@@ -23,8 +30,8 @@ export default class Home extends React.Component {
                 imgWidth={'90%'}
             ></GradualPicture>
             <div className="content-container">
-                <Header></Header>
-                <BlogList viewWidth={''}></BlogList>
+                <Header handleNavClick={this.handleNavClick}></Header>
+                <BlogList blogType={this.state.blogType}></BlogList>
             </div>
         </div>;
     }

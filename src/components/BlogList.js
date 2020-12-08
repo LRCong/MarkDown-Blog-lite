@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 import './BlogList.css'
 
@@ -7,61 +8,31 @@ import BlogView from './BlogView'
 export default class BlogList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { blogListData: [] };
+    }
+
+    componentDidMount() {
+        axios.get("/data/bloglist.json")
+            .then((value) => this.setState({ blogListData: value.data.data }));
     }
 
     render() {
+        const { blogListData } = this.state;
+        const { blogType } = this.props;
+        const list = blogType === 'All' ? blogListData : blogListData.filter((value) => value.type === blogType);
         return (
             <div className='list-container'>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'100px'}
-                    titleSize={'15px'}></BlogView>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'50px'}
-                    titleSize={'15px'}></BlogView>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'50px'}
-                    titleSize={'15px'}></BlogView>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'50px'}
-                    titleSize={'15px'}></BlogView>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'50px'}
-                    titleSize={'15px'}></BlogView>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'50px'}
-                    titleSize={'15px'}></BlogView>
-                <BlogView
-                    imgUrl={'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2199477428,615827370&fm=26&gp=0.jpg'}
-                    BlogTitle={"useEffect与函数组件生命周期"}
-                    subTitle={'2020/12/06'}
-                    viewWidth={'30%'}
-                    viewHeight={'50px'}
-                    titleSize={'15px'}></BlogView>
+                {list.map(value =>
+                    <BlogView
+                        imgUrl={value.imgUrl}
+                        BlogTitle={value.title}
+                        subTitle={value.date}
+                        viewWidth={'30%'}
+                        viewHeight={'100px'}
+                        titleSize={'15px'}
+                        key={value.id}
+                    ></BlogView>
+                )}
             </div>
         );
     }
