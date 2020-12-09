@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.infolist-container .info-nav {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.infolist-container .info-nav span {
+    display: inline-block;
+    padding: 16px;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.infolist-container .info-nav span a {
+    text-decoration: none;
+    color: black;
+}

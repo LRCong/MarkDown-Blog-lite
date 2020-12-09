@@ -1,6 +1,12 @@
 import React from 'react'
-
 import axios from 'axios'
+
+import AdminNav from '../components/AdminNav.js'
+import InfoCard from '../components/InfoCard.js'
+import InfoList from '../components/InfoList.js'
+
+import './AdminHome.css'
+
 
 export default class AdminHome extends React.Component {
     constructor(props) {
@@ -22,8 +28,18 @@ export default class AdminHome extends React.Component {
     }
 
     render() {
-        return <div>
-            {this.state.userName}后台管理页面
+        return <div className="admin-container">
+            <div className="admin-header">
+                <AdminNav></AdminNav>
+            </div>
+            <div className="admin-content">
+                <div className="user-info">
+                    <InfoCard name={this.state.userName} info={'爱前端的大学生'}></InfoCard>
+                </div>
+                <div className="blog-info">
+                    <InfoList></InfoList>
+                </div>
+            </div>
         </div>;
     }
 }

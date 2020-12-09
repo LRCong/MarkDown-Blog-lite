@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: "YoYuan";
+}
+
+.nav-container {
+    /* min-height: 40px; */
+    background-color: gray;
+    /* border-bottom: 1px solid gray; */
+    box-shadow: 1px 1px 1px #444444;
+}
+
+.nav-container span {
+    display: inline-block;
+    padding: 0 20px;
+    min-height: 100%;
+    font-size: 15px;
+    font-weight: 600px;
+}
+
+.nav-container span img {
+    position: relative;
+    top: 50%;
+    max-height: 20px;
+}
+
+.nav-container span a {
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    /* line-height: 100%; */
+    min-height: 100%;
+    font-size: 18px;
+    font-weight: 600px;
+}

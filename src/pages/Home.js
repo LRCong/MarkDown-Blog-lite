@@ -1,15 +1,19 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
 import './Home.css'
 
 import GradualPicture from '../components/GradualPicture'
 import Header from '../components/Header'
 import BlogList from '../components/BlogList'
+import BlogContent from '../components/BlogContent.js'
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { blogType: "All" };
+        this.state = {
+            blogType: "All", selectedBlog: ''
+        };
     }
 
     handleNavClick = (e, type) => {
@@ -17,6 +21,11 @@ export default class Home extends React.Component {
         this.setState({
             blogType: type
         });
+    };
+
+    handleSelect = (e, name) => {
+        this.setState({ selectedBlog: name });
+        this.props.history.push('/blog/' + this.state.selectedBlog);
     };
 
     render() {
@@ -30,8 +39,13 @@ export default class Home extends React.Component {
                 imgWidth={'90%'}
             ></GradualPicture>
             <div className="content-container">
-                <Header handleNavClick={this.handleNavClick}></Header>
-                <BlogList blogType={this.state.blogType}></BlogList>
+                <Switch>
+                    <Route exact path='/home' render={(props) => (<div>
+                        <Header handleNavClick={this.handleNavClick}></Header>
+                        <BlogList blogType={this.state.blogType} handleSelect={this.handleSelect}></BlogList>
+                    </div>)}></Route>
+                    <Route path='/home/blog/:name' component={BlogContent}></Route>
+                </Switch>
             </div>
         </div>;
     }

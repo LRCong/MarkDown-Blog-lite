@@ -1,0 +1,17 @@
+.infocard-container {
+    margin: 0 10px;
+    /* border: 4px solid gray; */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* background-color: #cccccc; */
+}
+
+.infocard-container .info-img {
+    border-radius: 120%;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.infocard-container .info-img img {
+    width: 100%;
+}
