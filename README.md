@@ -15,9 +15,14 @@
 + 博客详情页面布局
   ![image](https://github.com/LRCong/MarkDown-Blog-lite/blob/main/photo/BlogContentDemo.png)
 + 后台管理页面基本布局
+  ![image](https://github.com/LRCong/MarkDown-Blog-lite/blob/main/photo/AdminHomeDemo.png)
++ 编写文章页面
+  ![image](https://github.com/LRCong/MarkDown-Blog-lite/blob/main/photo/WriteBlogDemo.png)
 
 未来待改进：
 + 主页排版、功能提升
 + blogView增加标签以及动画效果
 + markdown博客渲染展示不支持换行
 + 博客详情页面缺少页面逻辑，如下一篇、上一篇、回到主页等
++ 主页过于简陋，没有响应式布局，头像大小有bug
++ markdown编辑器功能较弱
