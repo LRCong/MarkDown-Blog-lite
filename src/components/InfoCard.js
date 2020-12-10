@@ -6,7 +6,7 @@ export default function InfoCard(props) {
     return (
         <div className='infocard-container'>
             <div className="info-img">
-                <img src='https://avatars3.githubusercontent.com/u/48516864?s=460&u=f0f5f2f6c3ea9844b7a86495d72469002696b173&v=4' alt='图片'></img>
+                <img src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3608345974,1022498256&fm=26&gp=0.jpg' alt='图片'></img>
             </div>
             <div className='info-content'>
                 <h2>{props.name}</h2>

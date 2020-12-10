@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.infolist-container {
+    min-height: 90px;
+}
+
 .infolist-container .info-nav {
     margin: 0 auto;
     width: 90%;
@@ -19,4 +23,9 @@
 .infolist-container .info-nav span a {
     text-decoration: none;
     color: black;
+}
+
+.infolist-container .info-list {
+    padding: 40px;
+    padding-top: 30px;
 }

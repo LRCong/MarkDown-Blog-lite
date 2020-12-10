@@ -6,6 +6,8 @@
 
 .admin-container {
     min-height: 100vh;
+    background-color: #eeeeee;
+    overflow: hidden;
 }
 
 .admin-container .admin-header {
@@ -14,7 +16,6 @@
 
 .admin-container .admin-content {
     position: relative;
-    background-color: aqua;
     min-height: 90vh;
     padding: 10px 100px;
 }
@@ -22,14 +23,14 @@
 
 .admin-container .admin-content .user-info {
     min-height: 80vh;
-    background-color: azure;
+    /* background-color: azure; */
     width: 30%;
     float: left;
 }
 
 .admin-container .admin-content .blog-info {
     min-height: 80vh;
-    background-color: azure;
+    /* background-color: azure; */
     width: 68%;
     float: right;
 }

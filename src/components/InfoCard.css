@@ -1,17 +1,33 @@
 .infocard-container {
     margin: 0 10px;
     /* border: 4px solid gray; */
-    /* border-radius: 10px; */
+    border-radius: 10px;
+    padding-top: 20px;
     overflow: hidden;
     /* background-color: #cccccc; */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .infocard-container .info-img {
-    border-radius: 120%;
+    border-radius: 100%;
     overflow: hidden;
-    margin: 15px;
+    /* margin: 15px; */
+    max-height: 400px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .infocard-container .info-img img {
     width: 100%;
+    /* height: auto; */
+}
+
+.infocard-container .info-content {
+    width: 100%;
+    padding: 50px;
 }

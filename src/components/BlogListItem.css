@@ -1,0 +1,27 @@
+* {
+    text-decoration: none;
+    color: black;
+}
+
+.item-container {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.item-container .item-img {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    overflow: hidden;
+}
+
+.item-container .item-img img {
+    max-height: 100%;
+}
+
+.item-container .item-info {
+    float: left;
+    padding: 20px 20px;
+}
